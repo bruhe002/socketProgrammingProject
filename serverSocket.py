@@ -8,14 +8,14 @@ serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # PREPARE A SERVER SOCKET
 
 serverPort = 4189
-serverSocket.bind(('128.238.251.26', serverPort))
+serverSocket.bind(('', serverPort))
 serverSocket.listen(1)
 
 print('Ready to serve...')
 
 while True:
     # Establish the connection
-    # print('Ready to serve...')
+    print('Ready to serve...')
     connectionSocket, address = serverSocket.accept()
     try:
         message = connectionSocket.recv(1024)
