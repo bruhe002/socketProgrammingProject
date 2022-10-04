@@ -1,9 +1,9 @@
-from socket import *
+import socket 
 
 import sys
 
 
-serverSocket = socket(AF_INET, SOCK_STREAM)
+serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # PREPARE A SERVER SOCKET
 
