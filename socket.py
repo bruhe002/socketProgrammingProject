@@ -18,10 +18,10 @@ while True:
     # print('Ready to serve...')
     connectionSocket, address = serverSocket.accept()
     try:
-        message = connectionSocket.recv(1024).decode()
+        message = connectionSocket.recv(1024)
         filename = message.split()[1]
         f = open(filename[1:])
-        # outputdata = # Fill in start # Fill in end
+        outputdata = message.decode()
         # Send one HTTP header line into socket
         # Fill in Start 
         # Fill in end
