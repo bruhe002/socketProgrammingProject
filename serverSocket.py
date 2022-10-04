@@ -8,7 +8,7 @@ serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 # PREPARE A SERVER SOCKET
 
 serverPort = 4189
-serverSocket.bind(('', serverPort))
+serverSocket.bind(('128.238.251.26', serverPort))
 serverSocket.listen(1)
 
 print('Ready to serve...')
@@ -33,8 +33,7 @@ while True:
         # 
         # 
         # 
-        # connectionSocket.close()
-        pass
+        connectionSocket.close()
     except IOError:
         pass
         # Send Response message for file not found
